@@ -37,3 +37,6 @@ apiLabel.text = apiKey
 - Keys are stored in your device only and you may lost them if you delete them by mistake or your device is damaged
 - You need to add keys manually and add it to configurations-step 3- every time you clone the project as we didn't upload KEYS file to GitHub.
 
+## REFERENCE:
+https://medium.com/swift-india/secure-secrets-in-ios-app-9f66085800b4
+
