@@ -23,6 +23,7 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         addApiLabelToView()
+        apiLabel.text = getApiKey()
     }
 }
 
@@ -34,5 +35,13 @@ fileprivate extension ViewController {
                                      apiLabel.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -10),
                                      apiLabel.centerYAnchor.constraint(equalTo: view.centerYAnchor)
                                     ])
+    }
+    
+    func getApiKey() -> String {
+        if let apiKey = Bundle.main.infoDictionary?["API_KEY"] as? String {
+            return apiKey
+        } else {
+            return "unauthorized"
+        }
     }
 }
